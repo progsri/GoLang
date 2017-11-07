@@ -6,7 +6,8 @@ func main(){
 
 	fmt.Println("--------- No return value -------- ")
 	
-	fmt.Println(return_no_value)
+	//fmt.Println(return_no_value("no value"))  // Since this does not return a value and Prinln requires
+						   // a value, this will throw compilation errors.
 
 	fmt.Println("-------- one return value --------" )
 
