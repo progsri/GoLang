@@ -20,10 +20,19 @@ func main() {
 	fmt.Println("deleting key from a map >> ", map_1)
 
         fmt.Println("------- map's key returns multi values ---------------")
+	fmt.Println(" When there is no key the first value will return the default value ( zero-valued) \n 			So, always check for the secon value... which tells about the existence.");
+	 
 
-	map_1["key3"] = 0
-	v1, v2 := map_1["key4"]
+	map_1["key3"] = 111
+	v1, v2 := map_1["key3"]
 
-	fmt.Println("first is the value of key >> ", v1)
-	fmt.Println("second is the existence of the key >> ", v2)
+	fmt.Println("When key exists >> first is the value of key >> ", v1)
+	fmt.Println("When key exists >> second is the existence of the key >> ", v2)
+
+	v3, v4 := map_1["key4"]
+
+	fmt.Println("When key exists >> first is the value of key >> ", v3)
+        fmt.Println("When key exists >> second is the existence of the key >> ", v4)
+
+
 }
