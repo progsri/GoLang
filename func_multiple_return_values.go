@@ -12,6 +12,15 @@ func main(){
 	fmt.Println("-------- one return value --------" )
 
 	fmt.Println(return_one_value("only one value"))
+
+	fmt.Println("------- multiple return values ------ ")
+
+	fmt.Println(return_multiple_values())
+
+	fmt.Println("----- blank identifier ---------")
+
+	_,_,v3  := return_multiple_values() // _ blank identifier is the place holder to ignore the values and yet helps to maintain the return values order.
+	fmt.Println(v3)
 }
 
 func return_no_value(value string) {
@@ -19,4 +28,8 @@ func return_no_value(value string) {
 
 func return_one_value(value string) (string) {
 	return value
+}
+
+func return_multiple_values() (string, string, string) {
+	return "a", "b", "c"
 }
