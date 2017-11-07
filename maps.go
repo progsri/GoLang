@@ -34,5 +34,10 @@ func main() {
 	fmt.Println("When key exists >> first is the value of key >> ", v3)
         fmt.Println("When key exists >> second is the existence of the key >> ", v4)
 
+	fmt.Println("---------- Another way of creating a map -------")
+	
+	map_2 := map[string]int{}
+	map_2["key1"] = 1
 
+	fmt.Println(" map 2 ", map_2)
 }
