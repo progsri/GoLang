@@ -24,5 +24,15 @@ func main(){
 		fmt.Println("First Value [index] >> ", v3)
 		fmt.Println("Second Value [value] >> ", v4)
 	}
+
+	fmt.Println("-------------------- map -----------------")
 	
+	map_1 := map[string]string{}
+	map_1["k1"] = "v1"
+	map_1["k2"] = "v2"
+	map_1["k3"] = "v3"
+
+	for k,v := range map_1 {
+		fmt.Printf("key %s >> value %s \n",k, v) 
+	}
 }
