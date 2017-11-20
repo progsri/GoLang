@@ -44,5 +44,5 @@ func (c *customError) Error() string {
 }
 
 func methodWithCustomError() (int, error) {
-	return 1, &customError{"custom error name", "custom error desc"}
+	return 1, &customError{"custom error name", "custom error desc"} // Since customError implemented Error() method of error ... it was accepted
 }
