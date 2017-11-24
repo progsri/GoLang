@@ -10,5 +10,7 @@ func compare() {
 }
 
 func main() {
+
 	compare()
+
 }
