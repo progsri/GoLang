@@ -16,5 +16,5 @@ func main() {
 }
 
 func method1(channel1 chan string) {
-	//channel1 <- "method1"
+	channel1 <- "method1"
 }
