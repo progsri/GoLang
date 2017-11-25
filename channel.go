@@ -12,7 +12,9 @@ func main() {
 	// goroutine as channels are only used via goroutines.
 	go method1(channel1)
 
-	fmt.Println(<-channel1) // we can always access the data from a channel.
+	//	fmt.Println(<-channel1) // we can always access the data from a channel.
+	var input string
+	fmt.Scanln(&input)
 }
 
 func method1(channel1 chan string) {
