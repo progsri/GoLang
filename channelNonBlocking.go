@@ -36,9 +36,11 @@ func sendTo(channel1 chan string) {
 
 func sendToNonBlocking(channel1 chan string) {
 	//There is ono receiver
-	//select {
-	channel1 <- "sending to non blocking channel"
-	channel1 <- "sending to non blocking channel"
-	//}
-	fmt.Println("non blocking >> sent to channel")
+	select {
+	case channel1 <- "sending to non blocking channel":
+		fmt.Println("non blocking sent")
+	default:
+		fmt.Println(" non blocking could not send")
+	}
+	fmt.Println("non blocking >> end")
 }
