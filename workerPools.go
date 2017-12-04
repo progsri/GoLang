@@ -14,14 +14,9 @@ func main() {
 	go worker(channel1, channel2)
 	go worker(channel1, channel2)
 
-	channel1 <- "a"
-	fmt.Println("[Assing] job assigned ")
-
-	channel1 <- "b"
-	fmt.Println("[Assing] job assigned ")
-
-	channel1 <- "c"
-	fmt.Println("[Assing] job assigned ")
+	for i := 0; i < 3; i++ {
+		channel1 <- "a"
+	}
 
 	// channel1 <- "d"
 	// fmt.Println("[Assing] job assigned ")
@@ -41,11 +36,14 @@ func main() {
 func worker(recvChannel <-chan string, sendChannel chan<- string) {
 
 	for {
-		fmt.Println("[worker] >> lookin for job")
-		job := <-recvChannel
-		fmt.Println("[worker] >> job received " + job)
-		time.Sleep(time.Second * 2)
-		sendChannel <- job + " " + time.Now().String()
-		fmt.Println("[worker] >> job result posted ")
+		//fmt.Println("[worker] >> lookin for job")
+		job := <-recvChannel // This is not a blocking call ...it something exists it will get otherwise will be empty.
+
+		if len(job) > 0 {
+			fmt.Println("[worker] >> job received " + job)
+			time.Sleep(time.Second * 2)
+			sendChannel <- job + " " + time.Now().String()
+			fmt.Println("[worker] >> job result posted ")
+		}
 	}
 }
