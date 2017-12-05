@@ -2,24 +2,24 @@ package main
 
 import (
 	"fmt"
+	"strconv"
 	"time"
 )
 
 func main() {
 
-	channel1 := make(chan string)
+	channel1 := make(chan string, 20)
 	channel2 := make(chan string)
 
 	go worker(channel1, channel2)
 	go worker(channel1, channel2)
 	go worker(channel1, channel2)
 
-	for i := 0; i < 3; i++ {
-		channel1 <- "a"
+	for i := 0; i < 10; i++ {
+		channel1 <- "a" + strconv.Itoa(i)
 	}
 
-	// channel1 <- "d"
-	// fmt.Println("[Assing] job assigned ")
+	channel1 <- "d"
 
 	close(channel1)
 
