@@ -16,6 +16,9 @@ func init() {
 
 		methodInSamePackage()
 
+		tmpVariable := helper.HelperGlobalVariable
+
+		fmt.Println(tmpVariable)
 		helper.MethodInDifferentPackage()
 	}
 

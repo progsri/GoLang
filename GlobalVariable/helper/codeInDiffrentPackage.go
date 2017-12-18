@@ -2,7 +2,7 @@ package helper
 
 import "fmt"
 
-var helperGlobalVariable string = "helper"
+var HelperGlobalVariable string = "diffrent package - global variable"
 
 func init() {
 	fmt.Println("init helper")
