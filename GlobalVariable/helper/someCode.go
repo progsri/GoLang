@@ -8,6 +8,6 @@ func init() {
 	fmt.Println("init helper")
 }
 
-func methodInDifferentPackage(){
+func MethodInDifferentPackage(){
 	fmt.Println("Method in different package")
 }

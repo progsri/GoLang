@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-
+import "GoLang/GlobalVariable/helper" // this also works import "../helper"
 
 var mainGlobalVariable string = "main - global variable"
 
@@ -16,5 +16,7 @@ func init() {
 
 		methodInSamePackage()
 
-
+		helper.MethodInDifferentPackage()
 	}
+
+	// To execute this use go run *.go
