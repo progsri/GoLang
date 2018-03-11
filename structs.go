@@ -23,6 +23,7 @@ func main() {
 
 	fmt.Println("---------access struct ----------------")
 	fmt.Println("directly >>> ", g1.name)
+	// if name should be accessed outside this file then the first letter should be capital.
 
 	g1_ptr := &g1
 	fmt.Println("pointer >> ", g1_ptr.name)
