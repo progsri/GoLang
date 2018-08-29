@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 type group struct {
 	name string
@@ -20,6 +23,14 @@ func main() {
 	fmt.Println(subg1)
 	g1 := group{"g1", 1, subg1}
 	fmt.Println(g1)
+
+	g2 := &group{
+		name : "g1",
+		count : 1,
+		sub : subg1}
+	fmt.Println("g2 " , g2)
+	fmt.Println("type of g2 ", reflect.ValueOf(g2).Kind())
+	fmt.Println("type of &g2 ", &g2)
 
 	fmt.Println("---------access struct ----------------")
 	fmt.Println("directly >>> ", g1.name)
