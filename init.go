@@ -6,6 +6,11 @@ import (
 
 func main(){
 	fmt.Println("MAIN")
+
+	xPtr := new(int);
+	*xPtr = 10;
+	fmt.Println(&xPtr);
+	fmt.Println(*xPtr);
 }
 
 func init(){
