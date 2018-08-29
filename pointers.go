@@ -23,7 +23,6 @@ func main() {
     fmt.Println("address of i >> ", &i)
 
 	i_ptr  := &i
-	*i_ptr = 4
 	fmt.Println("type of i_ptr ", reflect.ValueOf(i_ptr).Kind())
 	fmt.Println("pointer(address) of i >> ", i_ptr)
 	fmt.Println("pointer(address) of i >> ", &i_ptr) //?? What is this actually giving
@@ -56,7 +55,7 @@ func main() {
 		sub : subg1}
 	fmt.Println("g1 " , g1)
 	fmt.Println("type of g1 ", reflect.ValueOf(g1).Kind())
-	fmt.Println("type of &g1 ", &g1)
+	fmt.Println("type of &g1  ", &g1)
 
 	fmt.Println("--------------------")
 
