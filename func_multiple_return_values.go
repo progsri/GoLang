@@ -22,8 +22,8 @@ func main() {
 	_, _, v3 := return_multiple_values() // _ blank identifier is the place holder to ignore the values and yet helps to maintain the return values order.
 	fmt.Println(v3)
 
-	var f1, e1, d1 string = return_multiple_values_with_namedReturn()
-	fmt.Println(d1, e1, f1)
+	var f1, e1, _ string = return_multiple_values_with_namedReturn() // Using Blank identifier to discard
+	fmt.Println( e1, f1)
 }
 
 func return_no_value(value string) {
