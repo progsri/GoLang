@@ -37,10 +37,36 @@ func main() {
 	fmt.Println("case2 after ", arr4)
 
 	// Capacity
-	arr5 := [...]int{0,1,2,3,4,5,6}
+	fmt.Println("----- Capacity -----")
+	arr5 := [...]int{0, 1, 2, 3, 4, 5, 6}
 	arr6 := arr5[2:3]
 	fmt.Println("arr6 ", arr6)
 	fmt.Println(" Length of arr6 ", len(arr6))
 	fmt.Println(" Capacity of arr6 ", cap(arr6))
 
+	//Append
+	fmt.Println("----- Append ------")
+	arr7 := [...]int{0, 1, 2, 3, 4, 5, 6}
+	arr8 := arr7[2:4]
+	fmt.Println(arr7)
+	fmt.Println(arr8)
+	fmt.Println(" Length of arr8 ", len(arr8), " Capacity of arr8 ", cap(arr8))
+	arr9 := append(arr8, 7) // append creates a new slice and this slice is attached to the original array itself
+	fmt.Println("\t after append to slice arr8")
+	fmt.Println(arr7)
+	fmt.Println(arr8)
+	fmt.Println(arr9)
+	arr7[2] = 999
+	fmt.Println(" \t after modifying the original array arr7")
+	fmt.Println(arr7)
+	fmt.Println(arr8)
+	fmt.Println(arr9)
+	arr8[1] = 888
+	fmt.Println(" \t after modifying the first slice arr8")
+	fmt.Println(arr7)
+	fmt.Println(arr8)
+	fmt.Println(arr9)
+	arr10 := append(arr9, 1111)
+	fmt.Println(arr10)
+	fmt.Println(" append creates a new slice and this slice is attached to the original array itself")
 }
