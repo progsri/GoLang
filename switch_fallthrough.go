@@ -12,7 +12,8 @@ func main() {
 	case number < 100:
 		fmt.Printf("%d is less than 100 \n", number)
 		fmt.Print(" second statement \n ")
-		fallthrough  // this makes the control move to the first statement of the next case
+		fallthrough // this makes the control move to the first statement of the next case
+		// this should be the last statement in a case
 	case number < 200:
 		fmt.Printf("%d is less than 200 \n", number)
 		fallthrough
