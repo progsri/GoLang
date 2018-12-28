@@ -36,4 +36,11 @@ func main() {
 	arr3[0] = "slice modified"
 	fmt.Println("case2 after ", arr4)
 
+	// Capacity
+	arr5 := [...]int{0,1,2,3,4,5,6}
+	arr6 := arr5[2:3]
+	fmt.Println("arr6 ", arr6)
+	fmt.Println(" Length of arr6 ", len(arr6))
+	fmt.Println(" Capacity of arr6 ", cap(arr6))
+
 }
