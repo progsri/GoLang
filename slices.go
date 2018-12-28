@@ -12,9 +12,13 @@ func main() {
 	string_slice_5[0] = "1"
 	fmt.Println(string_slice_5)
 
-	string_slice_5_copy := make([]string, len(string_slice_5))
+	fmt.Println("-----------Copying a slice does not modify the original array which can be garbage collected-----------------")
+	string_slice_5_copy := make([]string, len(string_slice_5)) // Creates a new slice which can be used to copy
 	copy(string_slice_5_copy, string_slice_5)
 
+	fmt.Println("original  ", string_slice_5)
+	fmt.Println("copy ", string_slice_5_copy)
+	string_slice_5_copy[0] = "modified"
 	fmt.Println("original  ", string_slice_5)
 	fmt.Println("copy ", string_slice_5_copy)
 
