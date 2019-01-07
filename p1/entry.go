@@ -10,4 +10,5 @@ func main() {
 	e1 := p3.Employee{Id: "e1", Email: "e1@gmail.com"}
 	fmt.Println(e1)
 	e1.Skills()
+//	fmt.Println(e1.Apply()) // This would not work as the Apply method is defined in a different package.
 }
