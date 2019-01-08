@@ -21,12 +21,12 @@ type SubEmployee struct {
 	p3.Employee
 }
 
-func (s *SubEmployee) apply() int { // This would not work as the  method is defined in a different package rather than on Employee package.
+func (s *SubEmployee) apply() int { 
 	fmt.Println(s.Email)
 	return 20
 }
 
-func (s *SubEmployee) Apply() int { // This would not work as the Apply method is defined in a different package rather than on Employee package.
+func (s *SubEmployee) Apply() int {   //    Overrides parent method
 	fmt.Println("Sub Employee Email ", s.Email)
 	return 20
 }

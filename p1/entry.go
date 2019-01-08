@@ -15,6 +15,6 @@ func main() {
 
 	s1 := p2.SubEmployee{e1}
 
-	fmt.Println("Sub Employee ", s1.Apply())
-
+	fmt.Println("Sub Employee ", s1.Apply())  // This calls SubEmployee 
+ 
 }

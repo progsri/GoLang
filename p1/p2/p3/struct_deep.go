@@ -17,3 +17,13 @@ func (e *Employee) skills() int { //Unexported
 	fmt.Println(e.Email)
 	return 10
 }
+
+func (e *Employee) apply() int {
+	fmt.Println(e.Email)
+	return 20
+}
+
+func (e *Employee) Apply() int {
+	fmt.Println(" Employee Email ", e.Email)
+	return 30
+}
