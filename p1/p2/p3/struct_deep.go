@@ -27,3 +27,7 @@ func (e *Employee) Apply() int {
 	fmt.Println(" Employee Email ", e.Email)
 	return 30
 }
+
+func (e Employee) Vacation() {
+	fmt.Println("Employee vacation plans")
+}

@@ -6,6 +6,15 @@ import (
 	"fmt"
 )
 
+// NewEmployee .... ( this is for go-lint)
+type NewEmployee interface {
+	Vacation()
+}
+
+func listOfVacationPlans(p NewEmployee) {
+	fmt.Printf("Type = %T, value = %v\n", p, p)
+}
+
 func main() {
 
 	e1 := p3.Employee{Id: "e1", Email: "e1@gmail.com"}
@@ -15,6 +24,8 @@ func main() {
 
 	s1 := p2.SubEmployee{e1}
 
-	fmt.Println("Sub Employee ", s1.Apply())  // This calls SubEmployee 
- 
+	fmt.Println("Sub Employee ", s1.Apply()) // This calls SubEmployee
+
+	listOfVacationPlans(e1) // works since p3.Employee implements NewEmployee interface
+
 }
