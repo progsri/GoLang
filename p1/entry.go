@@ -16,6 +16,9 @@ func listOfVacationPlans(p NewEmployee) {
 	// fmt.Println(p.Id) // Errors ..as you would only get interface methods .. which makes sense
 	// as one structs which implement this interface would have the non interface methods
 	// or fields
+
+	e1 := p.(p3.Employee) // type assertion
+	fmt.Println(" Accessing struct fields from the interfacetype ", e1.Id)
 }
 
 // Universal .. this has no methods ..so all structs can be of this type
