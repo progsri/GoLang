@@ -15,6 +15,13 @@ func listOfVacationPlans(p NewEmployee) {
 	fmt.Printf("Type = %T, value = %v\n", p, p)
 }
 
+// Universal .. this has no methods ..so all structs can be of this type
+type Universal interface{}
+
+func listOfSomething(p Universal) {
+	fmt.Printf("Type = %T, value = %v\n", p, p)
+}
+
 func main() {
 
 	e1 := p3.Employee{Id: "e1", Email: "e1@gmail.com"}
@@ -27,5 +34,6 @@ func main() {
 	fmt.Println("Sub Employee ", s1.Apply()) // This calls SubEmployee
 
 	listOfVacationPlans(e1) // works since p3.Employee implements NewEmployee interface
-
+	listOfSomething(e1)     // even though p3.Employee does not implement Universal interface, this still works
+	// as Universal Interface is Empty Interface ( no methods )
 }
