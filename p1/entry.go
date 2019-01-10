@@ -18,7 +18,15 @@ func listOfVacationPlans(p NewEmployee) {
 	// or fields
 
 	e1 := p.(p3.Employee) // type assertion
-	fmt.Println(" Accessing struct fields from the interfacetype ", e1.Id)
+	fmt.Println(" Accessing struct fields from the interface type ", e1.Id)
+
+	// Type Assertion Panic handling while converting a interface to a type which does not implement the interface
+	e2, error := p.(p2.SubEmployee)
+	if !error {
+		fmt.Println(" Error ")
+	} else {
+		fmt.Println(" Accessing struct fields from the interface type ", e2.Id)
+	}
 }
 
 // Universal .. this has no methods ..so all structs can be of this type
