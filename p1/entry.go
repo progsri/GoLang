@@ -13,6 +13,9 @@ type NewEmployee interface {
 
 func listOfVacationPlans(p NewEmployee) {
 	fmt.Printf("Type = %T, value = %v\n", p, p)
+	// fmt.Println(p.Id) // Errors ..as you would only get interface methods .. which makes sense
+	// as one structs which implement this interface would have the non interface methods
+	// or fields
 }
 
 // Universal .. this has no methods ..so all structs can be of this type
@@ -26,6 +29,7 @@ func main() {
 
 	e1 := p3.Employee{Id: "e1", Email: "e1@gmail.com"}
 	fmt.Println(e1)
+	fmt.Println(e1.Id)
 	e1.Skills()
 	//	fmt.Println(e1.Apply()) // This would not work as the Apply method is defined in a different package.
 
