@@ -12,7 +12,7 @@ type NewEmployee interface {
 }
 
 func listOfVacationPlans(p NewEmployee) {
-	fmt.Printf("Type = %T, value = %v\n", p, p)
+	fmt.Printf("Original Type = %T, value = %v\n", p, p)
 	// fmt.Println(p.Id) // Errors ..as you would only get interface methods .. which makes sense
 	// as one structs which implement this interface would have the non interface methods
 	// or fields
@@ -27,6 +27,17 @@ func listOfVacationPlans(p NewEmployee) {
 	} else {
 		fmt.Println(" Accessing struct fields from the interface type ", e2.Id)
 	}
+
+	fmt.Println("------------ Type Switch -------------")
+	switch p.(type) {
+	case p3.Employee:
+		fmt.Println("Type is Employee")
+	case p2.SubEmployee:
+		fmt.Println("Type is SubEmployee")
+	default:
+		fmt.Println("default")
+	}
+
 }
 
 // Universal .. this has no methods ..so all structs can be of this type
