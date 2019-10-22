@@ -18,4 +18,11 @@ func main() {
 	//accessing the date
 	fmt.Println(m2["a"])
 
+	// copying a map to another map still references the original map....
+	// to not hae a reference use for loop
+	m3 := m2
+	fmt.Printf(" value of m3 is %v \n ", m3)
+	delete(m2, "a")
+	fmt.Printf(" value of m3 is %v \n ", m3)
+
 }
