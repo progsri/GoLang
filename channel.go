@@ -15,7 +15,7 @@ func main() {
 
 	// all go routines are asleep ... deadlock
 	// if a channel in main go routine is waiting to read/write , but there is no write/read happening, then
-	// i think main go routine knows that and throws all go routines are asleep ... deadlock
+	// i think main go routine knows that and throws 
 
 
 	//We need the below as
